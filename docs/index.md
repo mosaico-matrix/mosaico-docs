@@ -1,19 +1,67 @@
 # Mosaico
-Mosaico is a unique platform that allows **users** and **developers** to create, share, and display custom widgets on a **LED matrix**. This ecosystem is composed of various applications working together to bring vibrant, customizable content to your Raspberry Pi-driven LED matrix.
-
-![Mosaico Logo](assets/icon.png)
+Mosaico is a unique (Free and open source ❤️) platform that allows **users** and **developers** to create, share, and display custom widgets on a **LED matrix**. This ecosystem is composed of various applications working together to bring vibrant, customizable content to your Raspberry Pi-driven LED matrix.
 
 ## Introduction
 Mosaico is designed to empower both users and developers by providing an open platform where custom Python widgets can be created and displayed on a LED matrix. Whether you want to show the time, weather, or your latest grocery list, Mosaico makes it easy to develop and deploy your ideas.
 
 ## Some examples of widgets:
 - Display the current time and date.
+```python 
+from datetime import date
+from mosaico import widget
+
+# Get the current date
+today = date.today()
+d = today.strftime("%d")
+m = today.strftime("%m")
+y = today.strftime("%Y")
+
+# Display on matrix
+day_month = widget.createText()
+day_month.setText(d + "-" + m)
+year = widget.createText()
+year.setText(y)
+year.translateY(8)
+
+# Nothing to do in the loop ;)
+def loop():
+    pass
+```
 - Show the weather forecast for your location.
 - Create a shopping list widget.
+```Python
+from mosaico import widget, config
+
+# Create title
+text = widget.createText()
+text.setText(config["name"])
+text.setHexColor(config["color"])
+text.translate(2,2)
+text.setFontHeight(10)
+
+# Create items
+items = []
+for i in range(0, len(config["items"])):
+    items.append(widget.createText())
+    items[i].setFontHeight(6)
+    items[i].setText(config["items"][i])
+    items[i].translate(2, 6+ 7 * (i + 1))
+
+def loop():
+    pass 
+```
 - Upload a custom image and display it as pixel art.
+```Python
+from mosaico import widget, config
+
+# Create image
+img = widget.createImage(widget.configAsset("image"))
+
+def loop():
+    pass
+```
 - Write custom text messages or quotes.
 - Create animations or visual effects.
-- ...
 
 ## Architecture Overview
 

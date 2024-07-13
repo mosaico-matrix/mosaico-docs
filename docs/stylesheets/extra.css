@@ -2,13 +2,22 @@
     padding: 50px;
 } */
 
-img {
-    display: block;
+.screenshots-container {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
 }
 
-.screenshot {
+.screenshots-container img {
     margin: 0 auto;
     display: block;
     width: 90%;
     height: auto;
+}
+
+@media print {
+
+    .screenshots-container img {
+        width: 200px;
+    }
 }

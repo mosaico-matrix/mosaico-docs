@@ -11,6 +11,15 @@ plugins:
     - glightbox
  #   - md_in_html
 #    - with-pdf
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
     
 extra_css:
     - stylesheets/extra.css
