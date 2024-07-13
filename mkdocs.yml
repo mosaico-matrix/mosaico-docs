@@ -1,5 +1,13 @@
 site_name: mosaico
 
+repo_url: https://github.com/orgs/mosaico-matrix/repositories
+
+nav:
+  - Home: index.md
+  - App: [mobile-app/index.md,
+          mobile-app/implementation-details.md,
+          mobile-app/shared-library.md]
+  - Credits: credits/index.md
 
 theme:
     name: material
