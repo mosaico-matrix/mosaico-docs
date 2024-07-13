@@ -15,12 +15,13 @@ The widget itself is hosted on a **git repo** so that it can be updated and main
 <div class="screenshots-container">
     <img src="assets/screenshots/store/store.png" alt="store">
     <img src="assets/screenshots/store/store_widget.png" alt="store_widget">
+    <img src="assets/screenshots/store/list_widget.png" alt="list_widget">
 </div>
 
-Once clicked on a widget, the user can see the widget details, by clicking on the install button,
-the Raspberry Pi will proceed to git clone the widget and configure it for us.
+Once clicked on a widget, the user can see the widget details, by clicking on the installation button,
+the Raspberry Pi will proceed to git clone the widget and configure it for us. Once the widget has been installed it will be ready in the widgets tab.
 
-Once the widget has been installed it will be ready in the widgets tab.
+<div class="pdf-break"></div>
 
 ## Installed widgets
 This is the first screen displayed when the app is launched.
@@ -31,7 +32,8 @@ From here, the user can see, configure and manage the widgets installed on the R
     <img src="assets/screenshots/home/edit_configurations.png" alt="edit_configurations">
     <img src="assets/screenshots/home/config_page.png" alt="config_page">
 </div>
-![Image title](assets/screenshots/home/obama_matrix.png)
+
+[//]: # (![Image title]&#40;assets/screenshots/home/obama_matrix.png&#41;)
 
 We can define 3 types of widgets:
 
@@ -48,14 +50,21 @@ We can define 3 types of widgets:
       - Games
       - Painter
 
+<div class="pdf-break"></div>
+
 ## Slideshows
 The slideshow feature allows the user to create a sequence of widgets that will be displayed in a loop.
 The user can define the duration of each widget in seconds.
 
 <div class="screenshots-container">
+    <img src="assets/screenshots/slideshows/slideshow_empty.png" alt="slideshow_empty">
     <img src="assets/screenshots/slideshows/new_slideshow.png" alt="new_slideshow">
     <img src="assets/screenshots/slideshows/slideshows_page.png" alt="slideshows_page">
 </div>
+
+Slideshows items are easily draggable and can be reordered at will. It is always possible to add, remove or edit the widgets in the slideshow.
+
+<div class="pdf-break"></div>
 
 ## Device status
 When in the home screen, the status of the connection to the Raspberry Pi is always displayed. In particular, we consider the app `connected`

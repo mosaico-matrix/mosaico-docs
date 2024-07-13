@@ -6,12 +6,14 @@ Mosaico is a unique (free and open source ❤️) platform that allows **users**
     <img src="mobile-app/assets/screenshots/home/edit_configurations.png" alt="edit_configurations">
     <img src="mobile-app/assets/screenshots/home/config_page.png" alt="config_page">
 </div>
-![Image title](mobile-app/assets/screenshots/home/obama_matrix.png)
+<div style="width: 600px !important; padding-left: 50px">
+    <img src="mobile-app/assets/screenshots/home/obama_matrix.png" alt="obama_matrix">
+</div>
 
 ## Introduction
 Mosaico is designed to empower both users and developers by providing an open platform where custom Python widgets can be created and displayed on a LED matrix. Whether you want to show the time, weather, or your latest grocery list, Mosaico makes it easy to develop and deploy your ideas.
 
-## Some examples of widgets:
+## Some examples of widgets
 - Display the current time and date.
 - Show the weather forecast for your location.
 - Create a shopping list widget.
@@ -24,11 +26,14 @@ Mosaico is designed to empower both users and developers by providing an open pl
 
 The Mosaico Ecosystem consists of:
 
-- **Raspberry Pi Software**: Written in C++ and Python, this software drives the LED matrix and manages the execution of widgets.
-- **Mobile App**: Developed with Flutter, connects to the Raspberry Pi via BLE and COAP, allowing users to manage widgets, browse the App Store, create slideshows, and configure network settings.
-- **App Store**: Developed with Laravel, a web platform where developers can submit their widgets for others to use.
-- **IDE**: A (dummy) desktop application that allows developers to create and test widgets locally. It is meant to be a lightweight tool to help developers get started with widget development.
-- **Simulator**: An X11 window that simulates the LED matrix for development purposes. A web-based simulator is in the works and will allow developers to test their widgets without a physical matrix in the easiest way possible.
+- [Raspberry Pi Software](https://github.com/mosaico-matrix/mosaico-software): Written in C++ and Python, this software drives the LED matrix and manages the execution of widgets.
+- [Mobile App](https://github.com/mosaico-matrix/mosaico-client): Developed with Flutter, connects to the Raspberry Pi via BLE and COAP, allowing users to manage widgets, browse the App Store, create slideshows, and configure network settings.
+- [App Store](https://github.com/mosaico-matrix/mosaico-web): Developed with Laravel, a web platform where developers can submit their widgets for others to use.
+- [IDE](https://github.com/mosaico-matrix/mosaico-ide): A (dummy) desktop application that allows developers to create and test widgets locally. It is meant to be a lightweight tool to help developers get started with widget development.
+- **Simulator**: (part of the software) An X11 window that simulates the LED matrix for development purposes. A web-based simulator is in the works and will allow developers to test their widgets without a physical matrix in the easiest way possible.
+- [Shared library](https://github.com/mosaico-matrix/mosaico-flutter-core): A Dart package that contains common code shared between the mobile app and the IDE.
+
+All these project are available on the organization [GitHub page](https://github.com/orgs/mosaico-matrix/repositories).
 
 [//]: # (## Support)
 

@@ -22,39 +22,13 @@ plugins:
     - glightbox
  #   - md_in_html
     - with-pdf:
-        author: Marco Coppola (0001020433)
-        copyright: ANY TEXT
+        author: marco.coppola3@studio.unibo.it (0001020433)
         cover: true
-#        back_cover: true
-#        cover_title: TITLE TEXT
-#        cover_subtitle: SUBTITLE TEXT
-#        toc_title: TOC TITLE TEXT
-#        heading_shift: false
-#        toc_level: 3
-#        ordered_chapter_level: 2
-#        excludes_children:
-#          - 'release-notes/:upgrading'
-#          - 'release-notes/:changelog'
-#
-#        exclude_pages:
-#          - 'bugs/'
-#          - 'appendix/contribute/'
-#        convert_iframe:
-#          - src: IFRAME SRC
-#            img: POSTER IMAGE URL
-#            text: ALTERNATE TEXT
-#          - src: ...
-#        two_columns_level: 3
-#
-#        render_js: true
-#        headless_chrome_path: headless-chromium
-#
-#        output_path: any-place/document.pdf
-#        enabled_if_env: ENABLE_PDF_EXPORT
-#
-#        debug_html: true
-#        show_anchors: true
-#        verbose: true
+        back_cover: true
+        cover_title: Mosaico
+        cover_subtitle: Project report for the "LAM" course
+        copyright: Alma Mater Studiorum Università di Bologna
+        heading_shift: false
 
 markdown_extensions:
   - pymdownx.blocks.html

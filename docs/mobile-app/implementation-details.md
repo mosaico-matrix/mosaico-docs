@@ -64,12 +64,12 @@ I chose to use BLE for the following reasons:
 - It allows the app to communicate with the Raspberry Pi even when the matrix is not connected to the local network
 - Latency generally is lower than Wi-Fi, this can be useful for live-interaction widgets in the future
 
-I didn't use BLE to handle the communication between the mobile app and the Raspberry Pi for the following reasons:
+I didn't use BLE to handle the main communication between the mobile app and the Raspberry Pi for the following reasons:
 
 - BLE throughput is much narrower than Wi-Fi
     - This could be a problem when sending files back and forth like the widget configuration packages
 - BLE has a limited range compared to Wi-Fi
-- BLE is much more complex to set up rather than a COAP server
+- BLE GATT server is much more complex to set up rather than a COAP server
 
 ### REST
 On the other hand, on a mobile device we don't have the same constraints as on the Raspberry Pi, so I decided to expose a simple REST API to handle the App Store.

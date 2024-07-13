@@ -20,4 +20,13 @@ This project wouldn't have been possible without the awesome open source communi
 - [Flutter](https://flutter.dev/): Framework used to create the mobile app
 
 ## Tools
+- [Raspberry Pi](https://www.raspberrypi.org/): Used to control the LED matrix
+- [Raspberry Pi cross-compiler](https://github.com/tttapa/docker-arm-cross-toolchain/): Used to compile the C++ code for the Raspberry Pi without needing to wait for hours
+- [Android Studio](https://developer.android.com/studio): Used to develop the Android app
+- [PHPStorm](https://www.jetbrains.com/phpstorm/): Used to develop the App Store API
+- [CLion](https://www.jetbrains.com/clion/): Used to develop the LED matrix controller
+- [PyCharm](https://www.jetbrains.com/pycharm/): Used to develop the networking module
+- [Docker](https://www.docker.com/): Simplified the development and deployment process by containerizing the app store API
+- [ChatGPT](https://chat.openai.com/): Helped me a lot to learn flutter and python
+- [SQLite](https://www.sqlite.org/index.html): Used to store the data in the networking module
 

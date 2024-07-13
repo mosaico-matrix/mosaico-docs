@@ -8,7 +8,7 @@ This choice was crucial to allow developers to create new widgets without having
 
 
 A simple example of a configuration file to create a configurations to upload an image to the matrix could be:
-/// html | div[style='float: left; width: 60%;']
+/// html | div[class='left-side']
 ```json
 {
   "form": {
@@ -28,15 +28,18 @@ A simple example of a configuration file to create a configurations to upload an
 ```
 ///
 
-/// html | div[style='float: right;width: 40%;']
+/// html | div[class='right-side']
 ![Image form](assets/screenshots/config_generator/image_form.png)
 ///
 
 /// html | div[style='clear: both;']
 ///
 
+<div class="pdf-break"></div>
+
+
 A simple example of a configuration file for a shopping list widget could be:
-/// html | div[style='float: left; width: 59%;']
+/// html | div[class='left-side']
 ```json
 {
   "form": {
@@ -70,13 +73,14 @@ A simple example of a configuration file for a shopping list widget could be:
 ```
 ///
 
-/// html | div[style='float: right;width: 40%;']
+/// html | div[class='right-side']
 ![Shopping List](assets/screenshots/config_generator/shopping_list_form.png)
 ///
 
 /// html | div[style='clear: both;']
 ///
 
+<div class="pdf-break"></div>
 
 ## Result of the configuration
 The data collected from the user is then saved in a .json file, which is then parsed by C++ when a specific widget with that configuration is loaded.
@@ -113,6 +117,9 @@ img = widget.createImage(widget.configAsset("image")) # The name of the asset
 def loop():
     pass
 ```
+
+<div class="pdf-break"></div>
+
 
 ## Implementation
 
@@ -316,6 +323,8 @@ This is done by the `config_form_state` file that manages the form state and the
     return output;
   }
 ```
+
+<div class="pdf-break"></div>
 
 
 ### Files
