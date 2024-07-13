@@ -1,0 +1,18 @@
+site_name: mosaico
+
+
+theme:
+    name: material
+    palette:
+      accent: indigo
+
+plugins:
+    - search
+    - glightbox
+ #   - md_in_html
+#    - with-pdf
+    
+extra_css:
+    - stylesheets/extra.css
+
+    

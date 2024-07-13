@@ -1,0 +1,7 @@
+- Nlohmann JSON:
+- hzeller: matrix library
+- Adafruit: LED matrix bonnet and guide to set up!
+- pybind11: Python bindings for C++
+- aiocoap: Python library for CoAP
+- bless: Python library for GATT
+- Pixel art icons: https://github.com/halfmage/pixelarticons

@@ -1,0 +1,14 @@
+/* body {
+    padding: 50px;
+} */
+
+img {
+    display: block;
+}
+
+.screenshot {
+    margin: 0 auto;
+    display: block;
+    width: 90%;
+    height: auto;
+}
