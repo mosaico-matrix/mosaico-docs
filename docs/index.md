@@ -1,6 +1,13 @@
 # Mosaico
 Mosaico is a unique (free and open source ❤️) platform that allows **users** and **developers** to create, share, and display custom widgets on a **LED matrix**. This ecosystem is composed of various applications working together to bring vibrant, customizable content to your Raspberry Pi-driven LED matrix.
 
+<div class="screenshots-container">
+    <img src="mobile-app/assets/screenshots/home/edit_widgets.png" alt="edit_widgets">
+    <img src="mobile-app/assets/screenshots/home/edit_configurations.png" alt="edit_configurations">
+    <img src="mobile-app/assets/screenshots/home/config_page.png" alt="config_page">
+</div>
+![Image title](mobile-app/assets/screenshots/home/obama_matrix.png)
+
 ## Introduction
 Mosaico is designed to empower both users and developers by providing an open platform where custom Python widgets can be created and displayed on a LED matrix. Whether you want to show the time, weather, or your latest grocery list, Mosaico makes it easy to develop and deploy your ideas.
 

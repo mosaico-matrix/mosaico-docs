@@ -58,7 +58,7 @@ The user can define the duration of each widget in seconds.
 </div>
 
 ## Device status
-When in the home screen, the status of the connection to the Raspberry Pi is always displayed. In particular we consider the app `connected`
+When in the home screen, the status of the connection to the Raspberry Pi is always displayed. In particular, we consider the app `connected`
 to the device when a COAP connection can be established, a warning will be displayed if BLE is not connected.
 
 All the major features of the app are available only when the app is connected to the Raspberry Pi via COAP while BLE is only 

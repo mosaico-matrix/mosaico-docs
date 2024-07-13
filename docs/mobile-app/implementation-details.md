@@ -48,8 +48,14 @@ The following endpoints are exposed by the Raspberry Pi:
 
 ### BLE
 Bluetooth Low Energy is an extremely power-efficient protocol that allows the mobile app to talk with the Raspberry Pi even when the matrix is not connected to the local network.
-The BLE server is implemented in Python using the `bless` library, and it exposes the following characteristics:
+The BLE server is implemented in Python using the `bless` library, it uses the service UUID `d34fdcd0-83dd-4abe-9c16-1230e89ad2f2` and it exposes the following characteristics:
 
+- **9d0e35da-bc0f-473e-a32c-25d33eaae17a**: Discovery
+    - READ: used to discover the matrix and returns `Hello World!` message
+- **9d0e35da-bc0f-473e-a32c-25d33eaae17b**: Wi-Fi
+    - WRITE: used to send the Wi-Fi credentials to the Raspberry Pi to connect to the local network
+- **9d0e35da-bc0f-473e-a32c-25d33eaae17c**: IP 
+    - READ: used to get the IP address of the Raspberry Pi 
 
 I chose to use BLE for the following reasons:
 
