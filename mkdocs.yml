@@ -21,14 +21,14 @@ plugins:
     - search
     - glightbox
  #   - md_in_html
-    - with-pdf:
-        author: marco.coppola3@studio.unibo.it (0001020433)
-        cover: true
-        back_cover: true
-        cover_title: Mosaico
-        cover_subtitle: Project report for the "LAM" course
-        copyright: Alma Mater Studiorum Università di Bologna
-        heading_shift: false
+    # - with-pdf:
+    #     author: marco.coppola3@studio.unibo.it (0001020433)
+    #     cover: true
+    #     back_cover: true
+    #     cover_title: Mosaico
+    #     cover_subtitle: Project report for the "LAM" course
+    #     copyright: Alma Mater Studiorum Università di Bologna
+    #     heading_shift: false
 
 markdown_extensions:
   - pymdownx.blocks.html
