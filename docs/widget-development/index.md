@@ -1,49 +1,22 @@
-```Python
-from mosaico import widget, config
+# Introduction
+Widgets can be dynamically installed on the matrix without needing software re-compilation.
+This is done by integrating a Python interpreter in the C++ software running on the Pi.
 
-# Create title
-text = widget.createText()
-text.setText(config["name"])
-text.setHexColor(config["color"])
-text.translate(2,2)
-text.setFontHeight(10)
+In order to start developing widgets, you need to have a basic understanding of Python and the Matrix software architecture.
 
-# Create items
-items = []
-for i in range(0, len(config["items"])):
-    items.append(widget.createText())
-    items[i].setFontHeight(6)
-    items[i].setText(config["items"][i])
-    items[i].translate(2, 6+ 7 * (i + 1))
+We can define 3 types of widgets:
 
-def loop():
-    pass 
-    
-from datetime import date
-from mosaico import widget
+- **Static**: Widgets that don't require any configurations
+    - A clock
+    - An inspirational quote
+    - News headlines
+    - Stock prices
+- **Configurable**: Widgets that require some input from the user before being displayed
+    - Weather forecast
+    - Todo list
+    - Image to pixel art
+- **Interactive**: Widgets that require live interaction with the user (coming soon)
+    - Games
+    - Painter
 
-# Get the current date
-today = date.today()
-d = today.strftime("%d")
-m = today.strftime("%m")
-y = today.strftime("%Y")
-
-# Display on matrix
-day_month = widget.createText()
-day_month.setText(d + "-" + m)
-year = widget.createText()
-year.setText(y)
-year.translateY(8)
-
-# Nothing to do in the loop ;)
-def loop():
-    pass
-    
-from mosaico import widget, config
-
-# Create image
-img = widget.createImage(widget.configAsset("image"))
-
-def loop():
-    pass
-```
+These objects will be provided for you to use in your widgets: `widget`, `config`, `canvas` and `colors`.

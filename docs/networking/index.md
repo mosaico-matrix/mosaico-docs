@@ -1,21 +1,10 @@
-# Implementation details
-
-## Why Flutter?
-This is the first time I've used Flutter, and I must say I'm impressed. 
-The development process is smooth, hot-reload is a game-changer, the pub.dev ecosystem is rich, and the community is very active.
-I've always been able to find a package that does what I need, and when I couldn't, I was able to write my own without too much hassle.
-
-I found it really easy to create a beautiful and responsive UI, the only steep learning curve was the state management, at first I used
-the standard `setState` of the `StatefulWidget` but then I switched to `Provider` and `ChangeNotifier` to keep the UI code totally separated from the business logic.
-Using the `Provider` package also allowed me to move the providers I needed in both the mobile app and the IDE to the shared library, so I could reuse them in both projects without duplicating code.
-
-## Networking
+# Networking
 The app uses multiple network protocols to communicate with the Raspberry Pi and the App Store.
 Obviously, the Pi-0 is not a beast in terms of computation power, so I tried to keep the network traffic and resource usage as low as possible, also considering that most of the resources will be used to render the widgets on the LED matrix.
 A full-fledged REST API would have been overkill for this project, so after consulting with my professor, I discovered the COAP protocol, which is perfect for IoT devices.
 To save data on the raspberry pi, I decided to use a lightweight SQLite database.
 
-### Coap
+## Coap
 COAP let me create a simple and efficient API without the bloated overhead of HTTP, and it's perfect for the Raspberry Pi, which has limited resources.
 The following endpoints are exposed by the Raspberry Pi:
 
@@ -27,7 +16,7 @@ The following endpoints are exposed by the Raspberry Pi:
     - **GET**: returns the active widget
     - **DELETE**: stops the active widget
 - `/widgets/configuration_form`: the form used as 'blueprint' to create a new widget configuration
-      - **GET**: returns the form
+  - **GET**: returns the form
 - `/widgets/developed`: the widgets developed by the user (usually with the IDE)
     - **POST**: installs a new widget
 - `/widget_configurations/{widget_id}`: the configurations of the widgets
@@ -46,7 +35,7 @@ The following endpoints are exposed by the Raspberry Pi:
 > Note: the COAP server is implemented in Python using the `aiocoap` library. The library didn't support templated urls (like `/widget_configurations/{widget_id}`) so I had to create a custom router to handle these type of requests.
 
 
-### BLE
+## BLE
 Bluetooth Low Energy is an extremely power-efficient protocol that allows the mobile app to talk with the Raspberry Pi even when the matrix is not connected to the local network.
 The BLE server is implemented in Python using the `bless` library, it uses the service UUID `d34fdcd0-83dd-4abe-9c16-1230e89ad2f2` and it exposes the following characteristics:
 
@@ -54,8 +43,8 @@ The BLE server is implemented in Python using the `bless` library, it uses the s
     - READ: used to discover the matrix and returns `Hello World!` message
 - **9d0e35da-bc0f-473e-a32c-25d33eaae17b**: Wi-Fi
     - WRITE: used to send the Wi-Fi credentials to the Raspberry Pi to connect to the local network
-- **9d0e35da-bc0f-473e-a32c-25d33eaae17c**: IP 
-    - READ: used to get the IP address of the Raspberry Pi 
+- **9d0e35da-bc0f-473e-a32c-25d33eaae17c**: IP
+    - READ: used to get the IP address of the Raspberry Pi
 
 I chose to use BLE for the following reasons:
 
@@ -71,7 +60,7 @@ I didn't use BLE to handle the main communication between the mobile app and the
 - BLE has a limited range compared to Wi-Fi
 - BLE GATT server is much more complex to set up rather than a COAP server
 
-### REST
+## REST
 On the other hand, on a mobile device we don't have the same constraints as on the Raspberry Pi, so I decided to expose a simple REST API to handle the App Store.
 The API is written in PHP using the Laravel framework, for now is very minimal, and it exposes the following endpoints:
 
@@ -80,4 +69,3 @@ The API is written in PHP using the Laravel framework, for now is very minimal, 
         - This can be filtered by various parameters like the category, the type, the name, etc. using query parameters like `?sort=name:asc`
 - `/widgets/{widget_id}`: the details of a widget
     - **GET**: returns the details of a widget, more in detail rather than the list of widgets
-

@@ -1,4 +1,4 @@
-# Showcase
+# Mobile App
 The mobile app interfaces with the Raspberry Pi to:
 
 - Browse and install widgets from the **app store**.
@@ -34,21 +34,6 @@ From here, the user can see, configure and manage the widgets installed on the R
 </div>
 
 [//]: # (![Image title]&#40;assets/screenshots/home/obama_matrix.png&#41;)
-
-We can define 3 types of widgets:
-
-- **Static**: Widgets that don't require any configurations
-    - A clock
-    - An inspirational quote
-    - News headlines
-    - Stock prices
-- **Configurable**: Widgets that require some input from the user before being displayed
-      - Weather forecast
-      - Todo list
-      - Image to pixel art
-- **Interactive**: Widgets that require live interaction with the user (coming soon)
-      - Games
-      - Painter
 
 <div class="pdf-break"></div>
 

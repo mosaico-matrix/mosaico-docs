@@ -4,31 +4,50 @@ repo_url: https://github.com/orgs/mosaico-matrix/repositories
 
 nav:
   - Home: index.md
-  - App: [
-          mobile-app/index.md,
-          mobile-app/shared-library.md,
-          mobile-app/config-generator.md,
-          mobile-app/implementation-details.md,
-          ]
+  - App: mobile-app/index.md
+  - Widget Development: [
+    widget-development/index.md,
+    widget-development/config-generator.md,
+    Widget: [
+      widget-development/widget/index.md,
+      Drawables: [
+        widget-development/widget/drawables/drawable.md,
+        widget-development/widget/drawables/text.md,
+        widget-development/widget/drawables/image.md,
+        Shapes: [
+          widget-development/widget/drawables/shapes/rectangle.md,
+        ]
+      ]
+    ],
+    Config: [
+      widget-development/config/index.md,
+    ],
+    Canvas: [
+      widget-development/canvas/index.md,
+    ],
+    Colors: widget-development/colors/index.md,
+
+  ]
+  - Networking: networking/index.md
   - Credits: credits/index.md
 
 theme:
-    name: material
-    palette:
-      accent: indigo
+  name: material
+  palette:
+    accent: indigo
 
 plugins:
-    - search
-    - glightbox
- #   - md_in_html
-    # - with-pdf:
-    #     author: marco.coppola3@studio.unibo.it (0001020433)
-    #     cover: true
-    #     back_cover: true
-    #     cover_title: Mosaico
-    #     cover_subtitle: Project report for the "LAM" course
-    #     copyright: Alma Mater Studiorum Università di Bologna
-    #     heading_shift: false
+  - search
+  - glightbox
+  #   - md_in_html
+  # - with-pdf:
+  #     author: marco.coppola3@studio.unibo.it (0001020433)
+  #     cover: true
+  #     back_cover: true
+  #     cover_title: Mosaico
+  #     cover_subtitle: Project report for the "LAM" course
+  #     copyright: Alma Mater Studiorum Università di Bologna
+  #     heading_shift: false
 
 markdown_extensions:
   - pymdownx.blocks.html
@@ -39,8 +58,8 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
-    
+
 extra_css:
-    - stylesheets/extra.css
+  - stylesheets/extra.css
 
     

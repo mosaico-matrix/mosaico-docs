@@ -30,3 +30,13 @@ This project wouldn't have been possible without the awesome open source communi
 - [ChatGPT](https://chat.openai.com/): Helped me a lot to learn flutter and python
 - [SQLite](https://www.sqlite.org/index.html): Used to store the data in the networking module
 
+## Why Flutter?
+This is the first time I've used Flutter, and I must say I'm impressed.
+The development process is smooth, hot-reload is a game-changer, the pub.dev ecosystem is rich, and the community is very active.
+I've always been able to find a package that does what I need, and when I couldn't, I was able to write my own without too much hassle.
+
+I found it really easy to create a beautiful and responsive UI, the only steep learning curve was the state management, at first I used
+the standard `setState` of the `StatefulWidget` but then I switched to `Provider` and `ChangeNotifier` to keep the UI code totally separated from the business logic.
+Using the `Provider` package also allowed me to move the providers I needed in both the mobile app and the IDE to the shared library, so I could reuse them in both projects without duplicating code.
+
+
