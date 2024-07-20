@@ -263,3 +263,22 @@ print(text.getY())  # Outputs: current y position
 | Type | Description      |
 |------|------------------|
 | int  | The y coordinate |
+
+## `centerHorizontally()`
+Centers the drawable horizontally on the widget.
+
+### Example
+
+```python
+from mosaico import widget
+rectangle = widget.createRectangle()
+rectangle.centerHorizontally()
+```
+
+### Returns
+None
+
+### Caveats
+Obviously, this method should be called after setting the width of the drawable.
+The text widget is special since the width cannot be determined beforehand, make 
+sure to center text only in the `loop()` function where the widget is already drawn and its width is known.

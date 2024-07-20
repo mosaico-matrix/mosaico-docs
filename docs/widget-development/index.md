@@ -20,3 +20,21 @@ We can define 3 types of widgets:
     - Painter
 
 These objects will be provided for you to use in your widgets: `widget`, `config`, `canvas` and `colors`.
+
+## File management
+Your widget will be stored in the `widgets` directory of the storage. The directory structure should look like this:
+
+```
+widgets/
+├── author_name/
+│   ├── widget_name/
+│   │   ├── widget.py
+configs/
+├── author_name/
+│   ├── widget_name/
+│   │   ├── config.json
+```
+
+If you create files inside your widget script (for example, to save persistent data),
+your path is automatically set to the widget's directory (if the widget is static) 
+or the configuration's directory (if the widget is configurable).
