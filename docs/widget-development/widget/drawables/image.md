@@ -21,3 +21,37 @@ image.setImage(widget.configAsset("icon"))
 
 ### Returns
 None
+
+## `flipHorizontally()`
+Flips the image horizontally.
+
+### Example
+
+```python
+image = widget.createImage()
+image.setImage(widget.widgetAsset("icon.ppm"))
+image.flipHorizontally()
+```
+
+### Parameters
+None
+
+### Returns
+None
+
+## `flipVertically()`
+Flips the image vertically.
+
+### Example
+
+```python
+image = widget.createImage()
+image.setImage(widget.widgetAsset("icon.ppm"))
+image.flipVertically()
+```
+
+### Parameters
+None
+
+### Returns
+None
