@@ -16,6 +16,28 @@ For more information on how to create drawables consult the [drawable](/widget-d
 
 Some helpers functions are available:
 
+## `remove(drawable)`
+Removes the given drawable from the widget.
+> Warning: This function will completely remove the drawable from the memory, accessing 
+> the drawable after removing it will create a SEGFAULT in C++.
+
+### Example
+
+```python
+from mosaico import widget 
+text = widget.createText()
+widget.remove(text)
+text.setText("A beautiful SEGFAULT") # This will create a SEGFAULT lol
+```
+
+### Parameters
+| Parameter | Type | Description                                |
+| --------- | ---- |--------------------------------------------|
+| drawable  | Drawable | The drawable to be removed. |
+
+## Returns
+None
+
 ## `widgetAsset(assetName)`
 Returns the path to the asset with the given name inside the widget assets folder.
 
