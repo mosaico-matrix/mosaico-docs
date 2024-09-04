@@ -282,3 +282,17 @@ None
 Obviously, this method should be called after setting the width of the drawable.
 The text widget is special since the width cannot be determined beforehand, make 
 sure to center text only in the `loop()` function where the widget is already drawn and its width is known.
+
+## `centerVertically()`
+Centers the drawable vertically on the widget.
+
+### Example
+
+```python
+from mosaico import widget
+rectangle = widget.createRectangle()
+rectangle.centerVertically()
+```
+
+### Returns
+None
